@@ -30,7 +30,7 @@ from blib2to3.pgen2.tokenize import TokenError
     # Using randomly-varied modes helps us to exercise less common code paths.
     mode=st.builds(
         black.FileMode,
-        line_length=st.just(88) | st.integers(0, 200),
+        line_length=st.just(100) | st.integers(0, 200),
         string_normalization=st.booleans(),
         is_pyi=st.booleans(),
     ),

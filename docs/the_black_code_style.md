@@ -160,20 +160,20 @@ include_trailing_comma = True
 force_grid_wrap = 0
 use_parentheses = True
 ensure_newline_before_comments = True
-line_length = 88
+line_length = 100
 ```
 
 The equivalent command line is:
 
 ```
-$ isort --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=88 [ file.py ]
+$ isort --multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=100 [ file.py ]
 ```
 
 </details>
 
 ### Line length
 
-You probably noticed the peculiar default line length. _Black_ defaults to 88 characters
+You probably noticed the peculiar default line length. _Black_ defaults to 100 characters
 per line, which happens to be 10% over 80. This number was found to produce
 significantly shorter files than sticking with 80 (the most popular), or even 79 (used
 by the standard library). In general,
@@ -189,15 +189,15 @@ harder to work with line lengths exceeding 100 characters. It also adversely aff
 side-by-side diff review on typical screen resolutions. Long lines also make it harder
 to present code neatly in documentation or talk slides.
 
-If you're using Flake8, you can bump `max-line-length` to 88 and mostly forget about it.
+If you're using Flake8, you can bump `max-line-length` to 100 and mostly forget about it.
 However, it's better if you use [Bugbear](https://github.com/PyCQA/flake8-bugbear)'s
-B950 warning instead of E501, and bump the max line length to 88 (or the `--line-length`
+B950 warning instead of E501, and bump the max line length to 100 (or the `--line-length`
 you used for black), which will align more with black's _"try to respect
 `--line-length`, but don't become crazy if you can't"_. You'd do it like this:
 
 ```ini
 [flake8]
-max-line-length = 88
+max-line-length = 100
 ...
 select = C,E,F,W,B,B950
 extend-ignore = E203, E501
@@ -213,7 +213,7 @@ overdo it by a few km/h".
 
 ```ini
 [flake8]
-max-line-length = 88
+max-line-length = 100
 extend-ignore = E203
 ```
 

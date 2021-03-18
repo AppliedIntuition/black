@@ -27,7 +27,7 @@ include_trailing_comma = True
 force_grid_wrap = 0
 use_parentheses = True
 ensure_newline_before_comments = True
-line_length = 88
+line_length = 100
 ```
 
 ### Why those options above?
@@ -66,7 +66,7 @@ The option `force_grid_wrap = 0` is just to tell isort to only wrap imports that
 the `line_length` limit.
 
 Finally, isort should be told to wrap imports when they surpass _Black_'s default limit
-of 88 characters via `line_length = 88` as well as
+of 100 characters via `line_length = 100` as well as
 `ensure_newline_before_comments = True` to ensure spacing import sections with comments
 works the same as with _Black_.
 
@@ -88,7 +88,7 @@ include_trailing_comma = True
 force_grid_wrap = 0
 use_parentheses = True
 ensure_newline_before_comments = True
-line_length = 88
+line_length = 100
 ```
 
 </details>
@@ -103,7 +103,7 @@ include_trailing_comma = True
 force_grid_wrap = 0
 use_parentheses = True
 ensure_newline_before_comments = True
-line_length = 88
+line_length = 100
 ```
 
 </details>
@@ -118,7 +118,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 ensure_newline_before_comments = true
-line_length = 88
+line_length = 100
 ```
 
 </details>
@@ -133,7 +133,7 @@ include_trailing_comma = True
 force_grid_wrap = 0
 use_parentheses = True
 ensure_newline_before_comments = True
-line_length = 88
+line_length = 100
 ```
 
 </details>
@@ -148,7 +148,7 @@ There are a few deviations that cause incompatibilities with _Black_.
 ### Configuration
 
 ```
-max-line-length = 88
+max-line-length = 100
 extend-ignore = E203
 ```
 
@@ -167,7 +167,7 @@ recommendation called `W503 line break before binary operator`. It should not be
 in your configuration.
 
 Also, as like with isort, flake8 should be configured to allow lines up to the length
-limit of `88`, _Black_'s default. This explains `max-line-length = 88`.
+limit of `100`, _Black_'s default. This explains `max-line-length = 100`.
 
 ### Formats
 
@@ -176,7 +176,7 @@ limit of `88`, _Black_'s default. This explains `max-line-length = 88`.
 
 ```ini
 [flake8]
-max-line-length = 88
+max-line-length = 100
 extend-ignore = E203
 ```
 
@@ -187,7 +187,7 @@ extend-ignore = E203
 
 ```cfg
 [flake8]
-max-line-length = 88
+max-line-length = 100
 extend-ignore = E203
 ```
 
@@ -198,7 +198,7 @@ extend-ignore = E203
 
 ```ini
 [flake8]
-max-line-length = 88
+max-line-length = 100
 extend-ignore = E203
 ```
 
@@ -215,7 +215,7 @@ mixed feelings about _Black_'s formatting style.
 
 ```
 disable = C0330, C0326
-max-line-length = 88
+max-line-length = 100
 ```
 
 ### Why those options above?
@@ -237,8 +237,8 @@ isn't configurable on this style, Pylint should be told to ignore these warnings
 Also, since _Black_ deals with whitespace around operators and brackets, Pylint's
 warning `C0326: Bad whitespace` should be disabled using `disable = C0326`.
 
-And as usual, Pylint should be configured to only complain about lines that surpass `88`
-characters via `max-line-length = 88`.
+And as usual, Pylint should be configured to only complain about lines that surpass `100`
+characters via `max-line-length = 100`.
 
 ### Formats
 
@@ -250,7 +250,7 @@ characters via `max-line-length = 88`.
 disable = C0330, C0326
 
 [format]
-max-line-length = 88
+max-line-length = 100
 ```
 
 </details>
@@ -260,7 +260,7 @@ max-line-length = 88
 
 ```cfg
 [pylint]
-max-line-length = 88
+max-line-length = 100
 
 [pylint.messages_control]
 disable = C0330, C0326
@@ -276,7 +276,7 @@ disable = C0330, C0326
 disable = "C0330, C0326"
 
 [tool.pylint.format]
-max-line-length = "88"
+max-line-length = "100"
 ```
 
 </details>

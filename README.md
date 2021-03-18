@@ -84,7 +84,7 @@ Usage: black [OPTIONS] [SRC]...
 Options:
   -c, --code TEXT                 Format the code passed in as a string.
   -l, --line-length INTEGER       How many characters per line to allow.
-                                  [default: 88]
+                                  [default: 100]
 
   -t, --target-version [py27|py33|py34|py35|py36|py37|py38|py39]
                                   Python versions that should be supported by
@@ -316,7 +316,7 @@ expressions by Black. Use `[ ]` to denote a significant space character.
 
 ```toml
 [tool.black]
-line-length = 88
+line-length = 100
 target-version = ['py37']
 include = '\.pyi?$'
 extend-exclude = '''

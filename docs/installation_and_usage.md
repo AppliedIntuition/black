@@ -39,7 +39,7 @@ Usage: black [OPTIONS] [SRC]...
 Options:
   -c, --code TEXT                 Format the code passed in as a string.
   -l, --line-length INTEGER       How many characters per line to allow.
-                                  [default: 88]
+                                  [default: 100]
 
   -t, --target-version [py27|py33|py34|py35|py36|py37|py38|py39]
                                   Python versions that should be supported by
