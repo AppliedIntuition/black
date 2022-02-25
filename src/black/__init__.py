@@ -2136,7 +2136,7 @@ def whitespace(leaf: Leaf, *, complex_subscript: bool) -> str:  # noqa: C901
                     syms.parameters,
                     syms.varargslist,
                 }:
-                    return NO
+                    return SPACE
 
                 elif prevp.parent.type == syms.typedargslist:
                     # A bit hacky: if the equal sign has whitespace, it means we
@@ -2190,7 +2190,7 @@ def whitespace(leaf: Leaf, *, complex_subscript: bool) -> str:  # noqa: C901
 
         if t == token.EQUAL:
             if prev.type != syms.tname:
-                return NO
+                return SPACE
 
         elif prev.type == token.EQUAL:
             # A bit hacky: if the equal sign has whitespace, it means we
@@ -2227,14 +2227,17 @@ def whitespace(leaf: Leaf, *, complex_subscript: bool) -> str:  # noqa: C901
     elif p.type == syms.argument:
         # single argument
         if t == token.EQUAL:
-            return NO
+            return SPACE
 
         if not prev:
             prevp = preceding_leaf(p)
             if not prevp or prevp.type == token.LPAR:
                 return NO
 
-        elif prev.type in {token.EQUAL} | VARARGS_SPECIALS:
+        elif prev.type in {token.EQUAL}:
+            return SPACE
+
+        elif prev.type in VARARGS_SPECIALS:
             return NO
 
     elif p.type == syms.decorator:
