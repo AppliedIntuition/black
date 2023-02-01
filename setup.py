@@ -72,7 +72,7 @@ setup(
         "appdirs",
         "toml>=0.10.1",
         "typed-ast>=1.4.0",
-        "regex>=2020.1.8",
+        "regex==2019.11.1",
         "pathspec>=0.6, <1",
         "dataclasses>=0.6; python_version < '3.7'",
         "typing_extensions>=3.7.4",
